@@ -1,0 +1,223 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: PopLight;
+    src: url("./fonts/Poppins-Light.ttf");
+
+}
+
+@font-face{
+    font-family: PopRegular;
+    src: url("./fonts/Poppins-Regular.ttf");
+    
+}
+
+@font-face{
+    font-family: port;
+    src: url("./fonts/Poppins-LightItalic.ttf");
+    
+}
+
+
+body{
+    font-family: PopLight;
+}
+.portfolio{
+    color: white;
+    background: radial-gradient(rgb(233, 114, 17),rgb(0,0,0));
+}
+
+
+nav{
+    min-height: 15vmin;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+.logo{
+    font-family: port;
+    font-size: 25px;
+    height: 15vmin;
+    width: auto;
+}
+
+.barber
+{
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.hero{
+    overflow: hidden;
+    height:50vh;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    grid-column: 2/5;
+}
+.hero a{
+    display: flex;
+}
+.hero a > img{
+    height:50vh;
+    width:25vh;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+   
+}
+
+.model-right{
+    transform: translate(0%,10%);
+}
+.model-left{
+    transform: translate(0%,-10%);
+}
+.hero a:hover .model-right{
+    transform: translate(0%,0%);
+}
+.hero a:hover .model-left{
+    transform: translate(0%,0%);
+}
+
+.details{
+    grid-column: 2/3;
+    align-self: end;
+}
+
+.details h1{
+    font-size: 30px;
+    font-family: PopRegular;
+}
+.details h3{
+    font-size: 25px;
+    padding:0px 0px 25px 0px;
+}
+
+.details p{
+    padding-bottom: 20px;
+}
+
+.nav-open{
+    height: 50vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    color: black;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-100%);
+}
+.contact{
+    grid-column: 2/3;
+}
+.nav-open h3{
+    font-size: 28px;
+    padding-bottom: 20px;
+    font-family: PopRegular;
+}
+.social-links img{
+    height: 2vmax;
+    padding: 0px 6px;
+}
+.logo,.menu{
+    z-index: 2;
+}
+.menu{
+    cursor: pointer;
+}
+.banner{
+    height: 50vh;
+    width:100%;
+    position: relative;
+}
+.banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.author{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    cursor: pointer;
+}
+.author h3{
+    padding:5px 0px;
+}
+.story,.work{
+    display: flex;
+    width: 90%;
+    margin:auto;
+    padding: 40px 0px;
+}
+.pimg{
+    width: 40vw;
+    height:auto;
+    cursor: pointer;
+}
+.pimg:hover{
+    opacity: 50%;
+}
+.story-description{
+    width: 50%;
+}
+.work-description{
+    width: 50%;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    padding-right: 20px;
+}
+
+.gallery img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+@media (max-width: 1024px) {
+ .story,.work{
+     flex-direction: column;
+ } 
+ .story-description,.work-description{
+     width: 100%;
+ }
+ .gallery{
+     display:grid;
+     grid-template-columns:repeat(auto-fit,minmax(200px,1fr)) ;
+     padding-right: 0px;
+ }
+ .gallery img{
+    height: unset;
+    width: 100%;
+    object-fit: unset;
+    object-position: unset;
+    
+}
+
+}
+
+
+
